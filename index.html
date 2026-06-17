@@ -1,1 +1,171 @@
-Clevenland Ave
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike and Dog</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #87CEEB 0%, #E0F6FF 100%);
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .scene {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(180deg, #87CEEB 0%, #90EE90 70%, #228B22 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* Dog SVG styles */
+        .dog {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Bike SVG styles */
+        .bike {
+            position: absolute;
+            right: 80px;
+            top: 150px;
+            animation: roll 4s linear infinite;
+        }
+        
+        @keyframes roll {
+            0% { transform: translateX(0) rotate(0deg); }
+            100% { transform: translateX(-600px) rotate(360deg); }
+        }
+        
+        .sun {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: #FFD700;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+        }
+        
+        .cloud {
+            position: absolute;
+            top: 50px;
+            background: white;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+        
+        .cloud1 {
+            left: 20px;
+            width: 80px;
+            height: 30px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .cloud2 {
+            left: 300px;
+            width: 60px;
+            height: 25px;
+            animation: float 8s ease-in-out infinite 1s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(30px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🐕 A Bike and Dog Adventure 🚲</h1>
+    
+    <div class="scene">
+        <!-- Sky elements -->
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        
+        <!-- Dog -->
+        <svg class="dog" viewBox="0 0 100 80" width="80" height="64">
+            <!-- Dog body -->
+            <ellipse cx="50" cy="50" rx="30" ry="25" fill="#8B4513"/>
+            <!-- Dog head -->
+            <circle cx="25" cy="35" r="18" fill="#8B4513"/>
+            <!-- Ears -->
+            <ellipse cx="15" cy="15" rx="8" ry="15" fill="#654321"/>
+            <ellipse cx="35" cy="15" rx="8" ry="15" fill="#654321"/>
+            <!-- Snout -->
+            <ellipse cx="15" cy="40" rx="10" ry="8" fill="#A0522D"/>
+            <!-- Nose -->
+            <circle cx="12" cy="38" r="3" fill="#000"/>
+            <!-- Eyes -->
+            <circle cx="20" cy="30" r="3" fill="#000"/>
+            <circle cx="32" cy="30" r="3" fill="#000"/>
+            <!-- Tail -->
+            <path d="M 80 45 Q 95 35 90 55" stroke="#8B4513" stroke-width="8" fill="none"/>
+            <!-- Front legs -->
+            <rect x="35" y="70" width="6" height="15" fill="#8B4513"/>
+            <rect x="50" y="70" width="6" height="15" fill="#8B4513"/>
+            <!-- Back legs -->
+            <rect x="60" y="70" width="6" height="15" fill="#8B4513"/>
+            <rect x="75" y="70" width="6" height="15" fill="#8B4513"/>
+            <!-- Tongue -->
+            <ellipse cx="12" cy="48" rx="3" ry="4" fill="#FF69B4"/>
+        </svg>
+        
+        <!-- Bike -->
+        <svg class="bike" viewBox="0 0 120 100" width="100" height="83">
+            <!-- Frame -->
+            <line x1="30" y1="40" x2="80" y2="40" stroke="#FF6347" stroke-width="3"/>
+            <line x1="80" y1="40" x2="50" y2="70" stroke="#FF6347" stroke-width="3"/>
+            <line x1="50" y1="70" x2="30" y2="40" stroke="#FF6347" stroke-width="3"/>
+            
+            <!-- Handlebars -->
+            <line x1="30" y1="40" x2="20" y2="20" stroke="#333" stroke-width="2"/>
+            <line x1="20" y1="20" x2="25" y2="15" stroke="#333" stroke-width="1"/>
+            <line x1="20" y1="20" x2="15" y2="15" stroke="#333" stroke-width="1"/>
+            
+            <!-- Seat -->
+            <ellipse cx="65" cy="38" rx="8" ry="4" fill="#000"/>
+            
+            <!-- Left wheel -->
+            <circle cx="30" cy="70" r="20" stroke="#333" stroke-width="2" fill="none"/>
+            <line x1="30" y1="50" x2="30" y2="90" stroke="#333" stroke-width="1"/>
+            <line x1="10" y1="70" x2="50" y2="70" stroke="#333" stroke-width="1"/>
+            <circle cx="30" cy="70" r="3" fill="#333"/>
+            
+            <!-- Right wheel -->
+            <circle cx="80" cy="70" r="20" stroke="#333" stroke-width="2" fill="none"/>
+            <line x1="80" y1="50" x2="80" y2="90" stroke="#333" stroke-width="1"/>
+            <line x1="60" y1="70" x2="100" y2="70" stroke="#333" stroke-width="1"/>
+            <circle cx="80" cy="70" r="3" fill="#333"/>
+            
+            <!-- Pedals -->
+            <circle cx="55" cy="60" r="3" fill="#FFD700"/>
+            <circle cx="55" cy="80" r="3" fill="#FFD700"/>
+        </svg>
+    </div>
+</body>
+</html>
