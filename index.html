@@ -13,8 +13,8 @@
         
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 50%, #2d1b4e 100%);
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #001a2e 0%, #003d5c 50%, #002e47 100%);
+            color: #00ff88;
             min-height: 100vh;
             padding: 40px 20px;
         }
@@ -27,24 +27,27 @@
         
         h1 {
             font-size: 3em;
-            color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            color: #00ff88;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.7), 0 0 60px rgba(0, 150, 255, 0.4);
             margin-bottom: 10px;
             font-style: italic;
+            letter-spacing: 3px;
         }
         
         .subtitle {
             font-size: 1.3em;
-            color: #b0a080;
+            color: #00d4ff;
             letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
         
         .divider {
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            background: linear-gradient(90deg, transparent, #00ff88, #00d4ff, transparent);
             margin: 40px 0;
-            opacity: 0.6;
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
         
         .container {
@@ -60,24 +63,25 @@
         }
         
         .level {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 212, 255, 0.08) 100%);
             border: 2px solid;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 30px;
             position: relative;
             overflow: hidden;
             animation: slideUp 0.8s ease-out forwards;
             opacity: 0;
             backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
         }
         
-        .level:nth-child(1) { animation-delay: 0.1s; border-color: #ff4444; }
-        .level:nth-child(2) { animation-delay: 0.2s; border-color: #ff8844; }
-        .level:nth-child(3) { animation-delay: 0.3s; border-color: #ffdd44; }
-        .level:nth-child(4) { animation-delay: 0.4s; border-color: #44ff44; }
-        .level:nth-child(5) { animation-delay: 0.5s; border-color: #4444ff; }
-        .level:nth-child(6) { animation-delay: 0.6s; border-color: #8844ff; }
-        .level:nth-child(7) { animation-delay: 0.7s; border-color: #ffd700; }
+        .level:nth-child(1) { animation-delay: 0.1s; border-color: #00ff88; box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), inset 0 0 10px rgba(0, 255, 136, 0.1); }
+        .level:nth-child(2) { animation-delay: 0.2s; border-color: #00dd7f; box-shadow: 0 0 20px rgba(0, 221, 127, 0.4), inset 0 0 10px rgba(0, 221, 127, 0.1); }
+        .level:nth-child(3) { animation-delay: 0.3s; border-color: #00cc77; box-shadow: 0 0 20px rgba(0, 204, 119, 0.4), inset 0 0 10px rgba(0, 204, 119, 0.1); }
+        .level:nth-child(4) { animation-delay: 0.4s; border-color: #0099ff; box-shadow: 0 0 20px rgba(0, 153, 255, 0.4), inset 0 0 10px rgba(0, 153, 255, 0.1); }
+        .level:nth-child(5) { animation-delay: 0.5s; border-color: #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), inset 0 0 10px rgba(0, 212, 255, 0.1); }
+        .level:nth-child(6) { animation-delay: 0.6s; border-color: #00aadd; box-shadow: 0 0 20px rgba(0, 170, 221, 0.4), inset 0 0 10px rgba(0, 170, 221, 0.1); }
+        .level:nth-child(7) { animation-delay: 0.7s; border-color: #00ff88; box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), inset 0 0 10px rgba(0, 255, 136, 0.1); }
         
         .level::before {
             content: '';
@@ -86,7 +90,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255, 215, 0, 0.1), transparent);
+            background: radial-gradient(circle at top right, rgba(0, 255, 136, 0.1), transparent);
             pointer-events: none;
         }
         
@@ -99,44 +103,46 @@
             display: inline-block;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #ffd700, #ffaa00);
-            color: #0a0e27;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            color: #001a2e;
             border-radius: 50%;
             text-align: center;
             line-height: 50px;
             font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 15px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.6), 0 0 15px rgba(0, 212, 255, 0.4);
         }
         
         .level h2 {
             font-size: 1.8em;
-            color: #ffd700;
+            color: #00ff88;
             margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
         }
         
         .level-subtitle {
-            color: #b0a080;
+            color: #00d4ff;
             font-size: 0.95em;
             font-style: italic;
             margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
         }
         
         .level-description {
-            color: #d0d0d0;
+            color: #88ff99;
             line-height: 1.7;
             font-size: 1em;
             margin-bottom: 15px;
         }
         
         .level-details {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 255, 136, 0.05);
             padding: 15px;
-            border-left: 3px solid #ffd700;
+            border-left: 3px solid #00d4ff;
             border-radius: 5px;
             font-size: 0.95em;
-            color: #b8b8b8;
+            color: #00cc77;
         }
         
         .esoteric-symbols {
@@ -145,15 +151,18 @@
             letter-spacing: 20px;
             margin: 40px 0;
             animation: pulse 2s ease-in-out infinite;
+            color: #00ff88;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 0 10px rgba(0, 212, 255, 0.3);
         }
         
         .footer {
             text-align: center;
             margin-top: 60px;
             padding: 40px 20px;
-            border-top: 2px solid rgba(255, 215, 0, 0.3);
-            color: #a0a080;
+            border-top: 2px solid rgba(0, 255, 136, 0.4);
+            color: #00d4ff;
             font-style: italic;
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
         }
         
         @keyframes fadeIn {
@@ -179,15 +188,18 @@
         @keyframes pulse {
             0%, 100% {
                 opacity: 0.6;
+                text-shadow: 0 0 10px rgba(0, 255, 136, 0.4), 0 0 5px rgba(0, 212, 255, 0.2);
             }
             50% {
                 opacity: 1;
+                text-shadow: 0 0 30px rgba(0, 255, 136, 0.8), 0 0 20px rgba(0, 212, 255, 0.5);
             }
         }
         
         .highlight {
-            color: #ffd700;
+            color: #00ff88;
             font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -223,7 +235,7 @@
                     <h2>Physical Reality</h2>
                     <p class="level-subtitle">The Material Plane</p>
                     <p class="level-description">
-                        The densest and most manifest level of existence. Physical reality encompasses all matter, form, and tangible phenomena governed by the laws of physics and natural sciences.
+                        The densest and most manifest level of existence. Physical reality encompasses all matter, form, and tangible phenomena governed by the laws of physics and natural science[...]
                     </p>
                     <div class="level-details">
                         <span class="highlight">Element:</span> Earth | <span class="highlight">Domain:</span> Matter & Form | <span class="highlight">Perception:</span> Five Physical Senses
@@ -238,10 +250,10 @@
                     <h2>Energetic Reality</h2>
                     <p class="level-subtitle">The Vital Force Plane</p>
                     <p class="level-description">
-                        The vibrational essence underlying physical matter. This level governs life force, chi, prana, and all energetic manifestations. It sustains and animates the physical body.
+                        The vibrational essence underlying physical matter. This level governs life force, chi, prana, and all energetic manifestations. It sustains and animates the physical body[...]
                     </p>
                     <div class="level-details">
-                        <span class="highlight">Element:</span> Water & Air | <span class="highlight">Domain:</span> Life Force & Vibration | <span class="highlight">Perception:</span> Auras & Energy Sensitivity
+                        <span class="highlight">Element:</span> Water & Air | <span class="highlight">Domain:</span> Life Force & Vibration | <span class="highlight">Perception:</span> Auras & En[...]
                     </div>
                 </div>
             </div>
@@ -253,10 +265,10 @@
                     <h2>Emotional Reality</h2>
                     <p class="level-subtitle">The Astral Plane</p>
                     <p class="level-description">
-                        The realm of emotions, desires, passions, and imagination. This level shapes personal reality through emotional charge and manifests as the astral body. Dreams originate here.
+                        The realm of emotions, desires, passions, and imagination. This level shapes personal reality through emotional charge and manifests as the astral body. Dreams originate h[...]
                     </p>
                     <div class="level-details">
-                        <span class="highlight">Element:</span> Fire & Water | <span class="highlight">Domain:</span> Emotion & Desire | <span class="highlight">Perception:</span> Dreams & Intuition
+                        <span class="highlight">Element:</span> Fire & Water | <span class="highlight">Domain:</span> Emotion & Desire | <span class="highlight">Perception:</span> Dreams & Intuit[...]
                     </div>
                 </div>
             </div>
@@ -271,7 +283,7 @@
                         The realm of pure thought, intellect, and abstract ideas. This level governs concepts, logic, consciousness patterns, and the power of mind to shape reality.
                     </p>
                     <div class="level-details">
-                        <span class="highlight">Element:</span> Air | <span class="highlight">Domain:</span> Thought & Reason | <span class="highlight">Perception:</span> Higher Mind & Contemplation
+                        <span class="highlight">Element:</span> Air | <span class="highlight">Domain:</span> Thought & Reason | <span class="highlight">Perception:</span> Higher Mind & Contemplat[...]
                     </div>
                 </div>
             </div>
@@ -283,7 +295,7 @@
                     <h2>Causal Reality</h2>
                     <p class="level-subtitle">The Karmic Plane</p>
                     <p class="level-description">
-                        The realm of causality, karma, and archetypal patterns. This level contains the seeds of all effects and represents the bridge between individual consciousness and universal law.
+                        The realm of causality, karma, and archetypal patterns. This level contains the seeds of all effects and represents the bridge between individual consciousness and univers[...]
                     </p>
                     <div class="level-details">
                         <span class="highlight">Element:</span> Ether | <span class="highlight">Domain:</span> Karma & Causality | <span class="highlight">Perception:</span> Spiritual Insight
@@ -298,7 +310,7 @@
                     <h2>Celestial Reality</h2>
                     <p class="level-subtitle">The Divine Plane</p>
                     <p class="level-description">
-                        The realm of divine consciousness, spiritual truth, and universal love. This level transcends individual identity and represents pure light, bliss, and unconditional existence.
+                        The realm of divine consciousness, spiritual truth, and universal love. This level transcends individual identity and represents pure light, bliss, and unconditional exist[...]
                     </p>
                     <div class="level-details">
                         <span class="highlight">Element:</span> Light | <span class="highlight">Domain:</span> Divinity & Truth | <span class="highlight">Perception:</span> Enlightened Awareness
@@ -313,10 +325,10 @@
                     <h2>Infinite Reality</h2>
                     <p class="level-subtitle">The Absolute Plane</p>
                     <p class="level-description">
-                        The ultimate ground of all existence—the source from which all realities emerge and to which all return. Pure consciousness, oneness, and the eternal void containing infinite potential.
+                        The ultimate ground of all existence—the source from which all realities emerge and to which all return. Pure consciousness, oneness, and the eternal void containing inf[...]
                     </p>
                     <div class="level-details">
-                        <span class="highlight">Element:</span> Void & Infinity | <span class="highlight">Domain:</span> Absolute Being | <span class="highlight">Perception:</span> Non-Dual Consciousness
+                        <span class="highlight">Element:</span> Void & Infinity | <span class="highlight">Domain:</span> Absolute Being | <span class="highlight">Perception:</span> Non-Dual Consc[...]
                     </div>
                 </div>
             </div>
